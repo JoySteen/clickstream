@@ -55,7 +55,7 @@
         clicks2=c(clicks[-(1:i)], rep(NA, i))
         dat=data.frame(clicks, clicks2) 
         transition=dcast(dat, clicks~clicks2, fun.aggregate=length, value.var="clicks2")
-        row.names(transition)=transition[,1]        
+        #row.names(transition)=transition[,1]        
         transition=transition[,-1]
         transition=transition[,-dim(transition)[2]]  
         pos1=which(names(transition)=="[[-]]")
